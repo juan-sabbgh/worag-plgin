@@ -31,7 +31,7 @@ async function getModelNames(userInput) {
     try {
         const requestData = {
             username: AS_ACCOUNT,
-            question: `Modelos: ${userInput}` // Enviamos lo que dijo el usuario para que el agente extraiga las entidades
+            question: `Modelos: ${userInput}`
         };
 
         const response = await fetch(url, {
@@ -51,21 +51,26 @@ async function getModelNames(userInput) {
         const data = await response.json();
         const rawAnswer = data.data.answer;
 
-        console.log(`Respuesta cruda del agente: ${rawAnswer}`);
+        console.log(`Respuesta cruda del agente: ${JSON.stringify(rawAnswer)}`); // Usamos JSON.stringify para ver caracteres ocultos en el log
 
-        // Limpieza: A veces los LLMs devuelven bloques de código markdown (```json ... ```)
-        // Usamos regex para extraer solo el JSON si viene sucio
+        // 1. Extracción con Regex (Busca el primer '{' y el último '}')
         let jsonString = rawAnswer;
         const jsonMatch = rawAnswer.match(/\{[\s\S]*\}/);
         if (jsonMatch) {
             jsonString = jsonMatch[0];
         }
 
+        // 2. SANITIZACIÓN (EL FIX CLAVE)
+        // Reemplaza Non-Breaking Spaces (\u00A0) y otros espacios raros por espacios normales
+        // Tambien elimina posibles saltos de linea mal formados si los hubiera
+        jsonString = jsonString.replace(/[\u00A0\u1680\u180e\u2000-\u2009\u200a\u202f\u205f\u3000]/g, ' ');
+
         try {
-            return JSON.parse(jsonString); // Esperamos { "models": ["MODELO1", "MODELO2"] }
+            return JSON.parse(jsonString); 
         } catch (e) {
-            console.error("Error parseando el JSON del agente:", e);
-            return { models: [] }; // Retorno seguro en caso de error
+            console.error("Error parseando el JSON saneado:", e);
+            console.error("String que falló:", jsonString);
+            return { models: [] }; 
         }
 
     } catch (error) {
