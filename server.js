@@ -14,6 +14,7 @@ const AGENT_TOKEN_BS_IMG = process.env.AGENT_TOKEN_BS_IMG;
 const AGENT_KEY_BS_IMG = process.env.AGENT_KEY_BS_IMG;
 
 const YCLOUD_API = process.env.YCLOUD_API;
+const NUMBER_YCLOUD = process.env.NUMBER_YCLOUD;
 
 app.use(cors());
 app.use(express.json());
@@ -89,7 +90,7 @@ async function enviarMensajeWhatsApp(number_receiver, image_link, caption_text) 
             caption: caption_text || "Aquí tienes el modelo que pediste 🏍️"
         },
         to: number_receiver,
-        from: "+525579435037"
+        from: `+52${NUMBER_YCLOUD}`
     };
 
     try {
@@ -115,7 +116,7 @@ async function enviarMensajeWhatsApp(number_receiver, image_link, caption_text) 
     }
 }
 
-app.post('/api/return-image-browspot', async (req, res) => {
+app.post('/api/return-image-garow', async (req, res) => {
     const {
         modelos, // Esto es el input del usuario o el nombre del modelo detectado
         function_call_username
