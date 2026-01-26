@@ -24,7 +24,23 @@ const images_motos = {
     "FRESCO": "https://agents.dyna.ai/api/app/cybertron/knowledge_file/image/knowledge/qa_img/1769106903443ee6cf-2131-4683-929b-da52ee6b4f96Fresco.png/",
     "CITY": "https://agents.dyna.ai/api/app/cybertron/knowledge_file/image/knowledge/qa_img/17691045373f36d799-c1a2-446a-bdbc-699acca05cbcCity-1.jpg/",
     "CITY PRO": "https://agents.dyna.ai/api/app/cybertron/knowledge_file/image/knowledge/qa_img/17691049879fcbf05f-a2d5-4fa7-aa55-0ea48d742466City-Pro-1.jpg/",
-    "GEEKS": "https://agents.dyna.ai/api/app/cybertron/knowledge_file/image/knowledge/qa_img/1769106682fffda581-fb9e-4464-9552-50410bad66f0Geeks-1.png/"
+    "GEEKS": "https://agents.dyna.ai/api/app/cybertron/knowledge_file/image/knowledge/qa_img/1769106682fffda581-fb9e-4464-9552-50410bad66f0Geeks-1.png/",
+    "G3":"https://agents.dyna.ai/api/app/cybertron/knowledge_file/image/knowledge/qa_img/1769448876c304cfaf-5d83-4159-b4b1-4fad82505feaimage13.png/",
+    "V6":"https://agents.dyna.ai/api/app/cybertron/knowledge_file/image/knowledge/qa_img/176944929489053c47-b3a1-41b8-aac5-e317747e7e67image6.png",
+    "DL":"https://agents.dyna.ai/api/app/cybertron/knowledge_file/image/knowledge/qa_img/1769450101a67641bc-51eb-4bc6-a571-433e83b1a8a8DL.png",
+    "SF / CIELO":"https://agents.dyna.ai/api/app/cybertron/knowledge_file/image/knowledge/qa_img/17694503984fbc63f5-74ab-48ae-abc7-c57639d63caasfcieo.jpg",
+    "CL / SY":"https://agents.dyna.ai/api/app/cybertron/knowledge_file/image/knowledge/qa_img/1769450997c158e115-8788-4a8b-b69e-148d6135f54eimage20.png",
+    "LUNA":"https://agents.dyna.ai/api/app/cybertron/knowledge_file/image/knowledge/qa_img/1769451127b3564252-18a1-4624-b4b1-ee17d9700afcLuna-1.png",
+    "VIENTO":"https://agents.dyna.ai/api/app/cybertron/knowledge_file/image/knowledge/qa_img/1769451691ee0cef58-fde9-475a-8f70-9c41db8824b4Viento-1.jpg",
+    "KINGKONG":"https://agents.dyna.ai/api/app/cybertron/knowledge_file/image/knowledge/qa_img/176945173605789dc0-85b6-4d22-8681-d94fbeceffebking-kong-1.jpg",
+    "VUELO 180":"https://agents.dyna.ai/api/app/cybertron/knowledge_file/image/knowledge/qa_img/1769451895ae4845f8-9422-4277-9d9b-e9cc6029f4f6Vuelo-180-1.png",
+    "X TIGRE / FS700":"https://agents.dyna.ai/api/app/cybertron/knowledge_file/image/knowledge/qa_img/1769453022db2256d1-0f58-45e2-a3a1-e823e1220b95image27.png",
+    "TIGRE":"https://agents.dyna.ai/api/app/cybertron/knowledge_file/image/knowledge/qa_img/17694535345b0fbb60-ab87-4bd9-b8c2-e436348c0d50image5.png",
+    "MX 16":"https://agents.dyna.ai/api/app/cybertron/knowledge_file/image/knowledge/qa_img/1769453773381f9812-1c6a-4561-8f83-cf58617ddc27MX-16-1.jpg",
+    "MX 17":"https://agents.dyna.ai/api/app/cybertron/knowledge_file/image/knowledge/qa_img/1769454452c8afec6c-c7d3-4e99-be8f-13267689b8d6MX17-2.jpg",
+    "MX 18":"https://agents.dyna.ai/api/app/cybertron/knowledge_file/image/knowledge/qa_img/1769454516a66a2126-554f-4146-aae0-9ec43ea76a34image36.png",
+    "MX 19":"https://agents.dyna.ai/api/app/cybertron/knowledge_file/image/knowledge/qa_img/17694547867eae79d3-cbce-49ad-be02-5c5f22cc9553image40.png",
+    "MX 20":"https://agents.dyna.ai/api/app/cybertron/knowledge_file/image/knowledge/qa_img/176945501345e2f455-4894-463d-bb4a-f24058a3f29aimage47.jpg"
 };
 
 async function getModelNames(userInput) {
