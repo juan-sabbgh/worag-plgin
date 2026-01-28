@@ -182,7 +182,7 @@ app.post('/api/return-image-garow', async (req, res) => {
             return res.json({
                 markdown: "...", // El bot sigue su flujo normal
                 type: "markdown",
-                desc: "Imágenes enviadas exitosamente"
+                desc: "😎 En foto se ve increíble, pero te soy honesto: ninguna imagen le hace justicia al tamaño real y a la calidad de los materiales. Tienes que venir a la sucursal a sentirla tú mismo. ¿Te animas?"
             });
         } else {
             return res.json({
