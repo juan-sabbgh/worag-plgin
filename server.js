@@ -188,7 +188,11 @@ app.post('/api/return-image-garow', async (req, res) => {
             return res.json({
                 markdown: "...",
                 type: "markdown",
-                desc: "Lo siento, no tengo una foto disponible de ese modelo específico por ahora."
+                desc: `Lo siento, no tengo una foto disponible de ese modelo específico por ahora. 
+                Pero puedes revisar nuestras redes sociales o página web:
+                Instagram: @garowmx
+                Facebook: GarowMx
+                Página oficial: garowgroup.com.mx`
             });
         }
 
@@ -197,7 +201,7 @@ app.post('/api/return-image-garow', async (req, res) => {
         return res.json({
             markdown: "...",
             type: "markdown",
-            desc: "Ocurrió un error técnico al buscar la imagen."
+            desc: "Ocurrió un error técnico al buscar la imagen. Intentalo nuevamente."
         });
     }
 });
